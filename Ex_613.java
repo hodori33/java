@@ -12,24 +12,24 @@ public class Ex_613 {
 		int grade = sc.nextInt();
 		sc.close();
 
-		Student st1 = new Student(name, s_name, grade);
-		System.out.println(st1.getstu());
+		Students st1 = new Students(name, s_name, grade);
+		System.out.println(st1.printStu());
 	}
 
 }
 
-class Student {
+class Students {
 	private String name;
 	private String s_name;
 	private int grade;
 
-	public Student(String name, String s_name, int grade) {
+	public Students(String name, String s_name, int grade) {
 		this.name = name;
 		this.s_name = s_name;
 		this.grade = grade;
 	}
 
-	String getstu() {
+	String printStu() {
 		String base = "Name : {0}\nSchool : {1}\nGrade : {2}";
 		String resutl = MessageFormat.format(base, this.name, this.s_name, this.grade);
 		return resutl;
